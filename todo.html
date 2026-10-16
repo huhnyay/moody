@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Meine To-Do-Liste</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+<div class="container">
+  <h2>📅 Deine Aufgaben</h2>
+
+  <div class="input-group">
+    <input type="text" id="eingabe" placeholder="Aufgabe eingeben..." maxlength="50">
+    <input type="date" id="datum">
+    <button id="hinzufuegen-button">➕</button>
+  </div>
+
+  <div id="fehlermeldung" class="fehlermeldung" style="display:none;"></div>
+
+  <ul id="todoList"></ul>
+</div>
+
+<!-- 🔙 Zurück zum Schreibtisch -->
+<button id="btnBackToDesk" class="btn-back">🔙 Zurück zum Schreibtisch</button>
+
+<script src="todo.js"></script>
+</body>
+</html>
