@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Stickerbuch</title>
+  <link rel="stylesheet" href="stickerbuch.css">
+  <link rel="icon" href="images/favicon.jpeg">
+</head>
+<body>
+
+<!-- 🖼 Moodboard-Fläche -->
+<div id="tv-image" class="tv-image"></div>
+
+<!-- 🌄 Hintergrundauswahl -->
+<div class="bg-chooser">
+  <button onclick="changeTV('images/bg1.jpg')">Hintergrund 1</button>
+  <button onclick="changeTV('images/bg2.jpg')">Hintergrund 2</button>
+  <button onclick="changeTV('images/bg3.jpg')">Hintergrund 3</button>
+  <button onclick="changeTV('images/bg4.jpg')">Hintergrund 4</button>
+  <button onclick="changeTV('images/bg5.jpg')">Hintergrund 5</button>
+  <button onclick="changeTV('images/bg6.jpg')">Hintergrund 6</button>
+  <button onclick="changeTV('images/bg7.jpg')">Hintergrund 7</button>
+  <button onclick="changeTV('images/bg8.jpg')">Hintergrund 8</button>
+  <button onclick="changeTV('images/bg9.jpg')">Hintergrund 9</button>
+</div>
+
+<!-- 🧸 Sticker-Menü -->
+<div class="sticker-menu">
+  <div class="sticker-title">Sticker</div>
+  <img src="images/stickers/stick1.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick2.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick3.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick4.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick5.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick6.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick7.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick8.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick9.png" class="sticker-option" draggable="true">
+  <img src="images/stickers/stick10.png" class="sticker-option" draggable="true">
+
+  <button id="deleteModeToggle" class="btn-delete-mode">Sticker löschen</button>
+</div>
+
+<!-- ℹ️ Info- Box -->
+
+<div id="infoBox" class="info-box">
+  <h3>ℹ️</h3>
+  <p>Ziehe Sticker aus dem Menü in das Moodboard. Du kannst sie skalieren, verschieben und mit dem Löschmodus entfernen.</p>
+</div>
+
+
+<!-- 🔙 Zurück zum Schreibtisch -->
+<button id="btnBackToDesk" class="btn-back">🔙 Zurück zum Schreibtisch</button>
+
+<script src="stickerbuch.js"></script>
+
+</body>
+</html>
+
+
+
+

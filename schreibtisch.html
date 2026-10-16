@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Moody – Schreibtisch</title>
+  <link rel="stylesheet" href="schreibtisch.css">
+  <link rel="icon" href="images/favicon.jpeg">
+</head>
+<body>
+<!-- 🏠 Home-Logout Icon Button -->
+<button id="btnBackHome" class="home-icon-btn" title="Zurück zur Startseite">
+  🏠
+</button>
+<!-- 🧭 Tab-Auswahl im Startbereich -->
+<div id="start" class="tab-content active">
+  <div class="center-content">
+    <h1>Willkommen auf deinem Schreibtisch 🌙</h1>
+    <div class="tab-menu">
+      <button onclick="showTab('stickerbuch')">🧸 Stickerbuch</button>
+      <button onclick="showTab('toDo')">📅 To do</button>
+      <button onclick="showTab('moodki')">🧠 MoodKI</button>
+      <button onclick="showTab('titelliste')">🎼 Credits</button>
+    </div>
+
+    <!-- 🎵 Musikplayer -->
+    <div class="music-player-small">
+      <select id="moodSelector">
+        <option value="">🎵 Stimmung wählen</option>
+        <option value="music/traurig.mp3">😢 Traurig</option>
+        <option value="music/verträumt.mp3">🌙 Verträumt</option>
+        <option value="music/beunruhigt.mp3">🌿 Beunruhigt</option>
+        <option value="music/verspielt.mp3">🐧 Verspielt</option>
+        <option value="music/cool.mp3">😎 Cool</option>
+      </select>
+      <div class="controls">
+        <button id="playBtn">▶️</button>
+        <button id="pauseBtn">⏸</button>
+      </div>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+      <audio id="audioPlayer" preload="auto"></audio>
+    </div>
+  </div>
+</div>
+
+<!-- 🧸 Stickerbuch-Tab -->
+<iframe id="stickerbuch" class="tab-content" src="stickerbuch.html" frameborder="0"></iframe>
+
+<!-- 📅 To Do -->
+<iframe id="toDo" class="tab-content" src="todo.html" frameborder="0"></iframe>
+
+
+<!-- 🧠 MoodKI-Tab -->
+<iframe id="moodki" class="tab-content" src="moodki.html" frameborder="0"></iframe>
+
+
+<!-- 🎼 Titelliste-Tab -->
+<iframe id="titelliste" class="tab-content" src="titelliste.html" frameborder="0"></iframe>
+
+
+<script src="schreibtisch.js"></script>
+
+</body>
+</html>

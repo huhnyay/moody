@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Moody – Startseite</title>
+    <link rel="stylesheet" href="moodyy.css">
+    <link rel="icon" href="images/favicon.jpeg">
+    <script src="moodyy.js" defer></script>
+</head>
+<body>
+
+<div class="content">
+    <h1>Willkommen bei Moody 🌙</h1>
+    <p>Dein persönlicher Ort für Stimmung, Klang & Ruhe.</p>
+
+    <!-- Schreibtisch Button -->
+    <a href="schreibtisch.html" class="btn-schreibtisch" id="deskBtn" style="display: none;">Schreibtisch öffnen</a>
+
+    <!-- Logout Button -->
+    <button id="logoutBtn" class="btn-logout" style="display: none;">Logout</button>
+
+    <!-- Signup/Login Formular -->
+    <div class="signup-form" id="signupForm">
+        <div class="form_area">
+            <p class="title" id="formTitle">SIGN UP</p>
+            <form id="form">
+                <div class="form_group" id="nameGroup">
+                    <label class="sub_title" for="name">Name</label>
+                    <input placeholder="Enter your full name" class="form_style" type="text" id="name">
+                </div>
+                <div class="form_group">
+                    <label class="sub_title" for="email">Email</label>
+                    <input placeholder="Enter your email" id="email" class="form_style" type="email">
+                </div>
+                <div class="form_group">
+                    <label class="sub_title" for="password">Password</label>
+                    <input placeholder="Enter your password" id="password" class="form_style" type="password">
+                </div>
+                <div>
+                    <button class="btn" type="submit" id="submitBtn">SIGN UP</button>
+                    <p id="switchText">
+                        Have an Account? <a class="link" href="#" id="switchMode">Login Here!</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+

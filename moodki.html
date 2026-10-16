@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Definiert den Dokumenttyp als HTML5 -->
+<html lang="de">
+<!-- Legt die Sprache der Seite auf Deutsch fest -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Zeichencodierung auf UTF-8 setzen (unterstützt Umlaute etc.) -->
+
+  <title>🧠 MoodKI</title>
+  <!-- Titel der Webseite (wird im Tab des Browsers angezeigt) -->
+
+  <link rel="stylesheet" href="moodki.css">
+  <!-- Verlinkt die externe CSS-Datei für das Styling -->
+</head>
+
+<body>
+<!-- Der sichtbare Hauptinhalt der Webseite beginnt hier -->
+
+<div class="personality-selector">
+  <!-- Auswahlfeld für den Kommunikationsstil (Persönlichkeit des Bots) -->
+
+  <label for="personalitySelect">🎭 MoodKI-Stil wählen:</label>
+  <!-- Beschriftung des Auswahlfelds -->
+
+  <select id="personalitySelect">
+    <!-- Dropdown-Menü für die Persönlichkeitsauswahl -->
+
+    <option value="cozy" selected>💗 Sanft & einfühlsam</option>
+    <!-- Standardmäßig ausgewählte Option -->
+
+    <option value="funny">😎 Locker & witzig</option>
+    <!-- Zweite Option: witziger Kommunikationsstil -->
+
+    <option value="neutral">🤖 Sachlich & direkt</option>
+    <!-- Dritte Option: sachlicher Stil -->
+  </select>
+</div>
+
+<div class="chat-container">
+  <!-- Hauptbereich des Chats, enthält Verlauf, Optionen und Eingabe -->
+
+  <div class="chat-window" id="chatWindow"></div>
+  <!-- Hier wird der Chatverlauf angezeigt (Nachrichten vom Nutzer und Bot) -->
+
+  <div class="chat-options" id="chatOptions"></div>
+  <!-- Hier erscheinen die Buttons zur Stimmungsauswahl (z. B. Gut, Geht so, Schlecht) -->
+
+  <div class="chat-input-area">
+    <!-- Bereich zur Texteingabe -->
+
+    <input
+            type="text"
+            id="text-input"
+            placeholder="Erzähl mir etwas …"
+            autocomplete="off"
+    />
+    <!-- Texteingabefeld für den Nutzer mit Platzhaltertext und deaktivierter Autovervollständigung -->
+  </div>
+</div>
+
+<!-- 🔙 Zurück zum Schreibtisch -->
+<button id="btnBackToDesk" class="btn-back">🔙 Zurück zum Schreibtisch</button>
+<!-- Button, um zurück zur Startseite oder dem „Schreibtisch“ zu gelangen -->
+
+<script src="moodki.js"></script>
+<!-- JavaScript-Datei wird eingebunden, steuert Interaktion und KI-Kommunikation -->
+
+</body>
+</html>

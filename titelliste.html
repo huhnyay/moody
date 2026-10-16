@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Titelliste</title>
+    <link rel="stylesheet" href="titelliste.css">
+    <link rel="icon" href="images/favicon.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<h2>🎼 Titelliste</h2>
+<div class="song-list">
+    <p class="song-item">😢 Traurig</p>
+    <p class="song-item">🌙 Verträumt</p>
+    <p class="song-item">🌿 Beunruhigt</p>
+    <p class="song-item">🐧 Verspielt</p>
+    <p class="song-item">😎 Cool</p>
+    <!-- Weitere Titel hinzufügen -->
+</div>
+
+
+<!-- 🎼 Titelliste Tab -->
+<iframe id="titelliste" class="tab-content" src="titelliste.html" frameborder="0"></iframe>
+
+
+<div id="infoBox" class="info-box">
+    <h3>ℹ️</h3>
+    <p>Alle Beats wurden mit Zustimmung des Künstlers genutzt. Schaut gerne auf dessem Instagram Account vorbei!</p>
+    <div class="info-box">quinn.wavs</p> </div>
+
+<!-- 🔙 Zurück zum Schreibtis,,ch -->
+<button id="btnBackToDesk" class="btn-back">🔙 Zurück zum Schreibtisch</button>
+
+<script>
+    // Wenn der Button gedrückt wird, zum Schreibtisch-Tab zurückkehren
+    document.getElementById('btnBackToDesk').addEventListener('click', () => {
+        parent.showTab('start'); // Zeigt den Schreibtisch-Tab in der übergeordneten Seite
+    });
+</script>
+
+
+
+</body>
+</html>
+
