@@ -1,0 +1,163 @@
+/* Gesamter Seitenbereich */
+body {
+    margin: 0; /* Entfernt äußeren Abstand des body-Elements */
+    padding: 0; /* Entfernt inneren Abstand */
+    font-family: sans-serif; /* Setzt eine serifenlose Schriftart */
+    background: url('/images/wall5.jpg') no-repeat center center fixed; /* Hintergrundbild mittig, nicht wiederholt, feststehend beim Scrollen */
+    background-size: cover; /* Hintergrundbild wird so skaliert, dass es den gesamten Bereich abdeckt */
+    color: white; /* Standard-Schriftfarbe auf der Seite */
+    height: 100vh; /* Höhe des Body entspricht der gesamten Viewport-Höhe */
+    display: flex; /* Aktiviert Flexbox */
+    flex-direction: column; /* Kinder werden vertikal gestapelt */
+    align-items: center; /* Inhalte werden horizontal zentriert */
+}
+
+/* Bereich für die Persönlichkeitsauswahl */
+.personality-selector {
+    margin-top: 20px; /* Abstand nach oben */
+    text-align: center; /* Zentriert den Textinhalt */
+    color: white; /* Schriftfarbe */
+    font-size: 1rem; /* Standard-Schriftgröße */
+}
+
+/* Das Dropdown-Menü im Persönlichkeitsauswahlbereich */
+.personality-selector select {
+    padding: 6px 12px; /* Innenabstand (oben/unten + links/rechts) */
+    border-radius: 10px; /* Abgerundete Ecken */
+    border: none; /* Kein Rahmen */
+    background-color: rgba(255, 255, 255, 0.15); /* Halbtransparenter weißer Hintergrund */
+    color: white; /* Schriftfarbe */
+    backdrop-filter: blur(5px); /* Weicher Unschärfeeffekt für den Hintergrund */
+    font-size: 1rem; /* Schriftgröße */
+    margin-left: 8px; /* Abstand zum vorherigen Element */
+    cursor: pointer; /* Mauszeiger ändert sich zu "Zeigefinger" */
+}
+
+/* Hauptcontainer für den Chatbereich */
+.chat-container {
+    display: flex; /* Flexbox-Aktivierung */
+    flex-direction: column; /* Kinder werden vertikal gestapelt */
+    height: 70vh; /* Höhe entspricht 70% der Bildschirmhöhe */
+    width: 90%; /* Breite beträgt 90% der Bildschirmbreite */
+    max-width: 600px; /* Maximalbreite für große Bildschirme */
+    background: rgba(255, 255, 255, 0.05); /* Sehr transparenter weißer Hintergrund */
+    backdrop-filter: blur(10px); /* Hintergrund wird weichgezeichnet */
+    padding: 20px; /* Innenabstand rundherum */
+    border-radius: 20px; /* Runde Ecken */
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); /* Weicher Schlagschatten */
+    margin-top: 20px; /* Abstand zum oberen Bereich */
+}
+
+/* Fenster, in dem der Chatverlauf dargestellt wird */
+.chat-window {
+    flex: 1; /* Füllt den restlichen Platz im Container */
+    overflow-y: auto; /* Scrollbar erscheint, wenn Inhalt zu hoch ist */
+    padding: 10px; /* Innenabstand */
+    border-bottom: 1px solid #444; /* Dünner, dunkler unterer Rand */
+}
+
+/* Bereich mit Stimmungs-Buttons */
+.chat-options {
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center; /* Zentriert die Buttons */
+    gap: 10px; /* Abstand zwischen den Buttons */
+    margin: 10px 0; /* Vertikaler Außenabstand */
+    flex-wrap: wrap; /* Buttons umbrechen bei wenig Platz */
+}
+
+/* Einzelne Buttons für die Stimmungsauswahl */
+.chat-options button {
+    padding: 10px 16px; /* Innenabstand */
+    font-size: 1rem; /* Schriftgröße */
+    border: none; /* Kein Rahmen */
+    border-radius: 10px; /* Runde Ecken */
+    background-color: rgba(255, 255, 255, 0.15); /* Halbtransparenter weißer Hintergrund */
+    color: white; /* Schriftfarbe */
+    cursor: pointer; /* Zeiger-Mauscursor */
+    transition: background-color 0.2s, transform 0.2s; /* Weicher Übergang bei Hover */
+    backdrop-filter: blur(5px); /* Unschärfeeffekt */
+}
+
+/* Hover-Effekt für Stimmungs-Buttons */
+.chat-options button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Heller beim Hover */
+    transform: scale(1.05); /* Leicht vergrößert */
+}
+
+/* Aktuell ausgewählter Button (Stimmung) */
+.chat-options button.selected {
+    border: 2px solid white; /* Weißer Rahmen */
+    background-color: rgba(255, 255, 255, 0.25); /* Etwas heller als Standard */
+    font-weight: bold; /* Fettschrift zur Hervorhebung */
+}
+
+/* Container für Eingabezeile */
+.chat-input-area {
+    display: flex; /* Flexbox-Aktivierung */
+    gap: 10px; /* Abstand zwischen Input und Button (falls vorhanden) */
+    margin-top: 10px; /* Abstand nach oben */
+}
+
+/* Texteingabefeld */
+.chat-input-area input {
+    flex: 1; /* Füllt verfügbaren Platz */
+    padding: 10px; /* Innenabstand */
+    border-radius: 10px; /* Runde Ecken */
+    border: none; /* Kein sichtbarer Rahmen */
+    font-size: 16px; /* Schriftgröße */
+    background-color: rgba(255, 255, 255, 0.1); /* Sehr transparenter Hintergrund */
+    color: white; /* Schriftfarbe */
+}
+
+/* Fokus-Effekt beim Klicken ins Eingabefeld */
+.chat-input-area input:focus {
+    outline: none; /* Kein Standard-Rahmen */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Heller Schatteneffekt */
+}
+
+/* Allgemeines Styling für Nachrichten (Bot und User) */
+.bot-message, .user-message {
+    margin: 5px 0; /* Vertikaler Abstand */
+    padding: 10px 15px; /* Innenabstand */
+    border-radius: 12px; /* Runde Ecken */
+    max-width: 80%; /* Nachrichten nicht breiter als 80% */
+    word-wrap: break-word; /* Lange Wörter umbrechen */
+}
+
+/* Bot-Nachrichten links mit dunklem Hintergrund */
+.bot-message {
+    background: #444; /* Dunkler Hintergrund */
+    align-self: flex-start; /* Linksbündig im Container */
+}
+
+/* Benutzer-Nachrichten rechts mit violettem Hintergrund */
+.user-message {
+    background: #8a2be2; /* Violetter Hintergrund */
+    color: white; /* Schriftfarbe */
+    align-self: flex-end; /* Rechtsbündig im Container */
+}
+
+/* Zurück-Button unten zentriert */
+.btn-back {
+    position: absolute; /* Fester Platz auf dem Bildschirm */
+    bottom: 40px; /* Abstand zum unteren Rand */
+    left: 50%; /* Mitte des Bildschirms */
+    transform: translateX(-50%); /* Horizontal zentriert */
+    padding: 10px 24px; /* Innenabstand */
+    background-color: #ffffffcc; /* Halbtransparenter weißer Hintergrund */
+    color: #111; /* Dunkle Schriftfarbe */
+    font-weight: bold; /* Fettschrift */
+    border: none; /* Kein Rahmen */
+    border-radius: 12px; /* Runde Ecken */
+    cursor: pointer; /* Zeiger-Cursor */
+    z-index: 50; /* Über anderen Elementen */
+    font-size: 1em; /* Standardgröße */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Weicher Schatten */
+    transition: 0.2s ease; /* Weicher Übergang bei Hover */
+}
+
+/* Hover-Effekt für den Zurück-Button */
+.btn-back:hover {
+    background-color: #fff; /* Reines Weiß */
+    transform: translateX(-50%) scale(1.05); /* Leicht vergrößert, aber zentriert */
+}

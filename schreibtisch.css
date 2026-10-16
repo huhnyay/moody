@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;  /* Horizontal zentrieren */
+    align-items: center;      /* Vertikal zentrieren */
+    height: 100vh;            /* Volle Höhe */
+    text-align: center;       /* Text zentrieren */
+    position: relative;
+    background: url('images/wall5.jpg') no-repeat center center fixed; /* Nur wall4 als Hintergrund */
+    background-size: cover;  /* Bild an die gesamte Seite anpassen */
+}
+
+/* Transparente Overlay-Schicht */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Schwarze Schicht mit Transparenz */
+    z-index: -1; /* Hintergrundbild hinter den Inhalt legen */
+}
+
+/* Zentrierter Bereich im Start-Tab */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Inhalt wird oben statt in der Mitte ausgerichtet */
+    height: 80vh; /* Nutzt 80% der Bildschirmhöhe statt 100vh */
+    text-align: center;
+    gap: 40px;
+    padding-top: 40px; /* Abstand vom oberen Rand */
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+/* Tab-Navigation (zentriert im Startbereich) */
+.tab-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tab-menu button {
+    background: #ffffffcc;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #111;
+}
+
+.tab-menu button:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+
+/* Musikplayer im Start-Tab */
+.music-player-small {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    width: 220px;
+    font-size: 1.0em;
+}
+
+.music-player-small select,
+.music-player-small input,
+.music-player-small button {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+.music-player-small .controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.music-player-small button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffffcc;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.music-player-small button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+/* Tab-Inhalte */
+.tab-content {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+iframe {
+    width: 100%;
+    height:
+        /* 🏠 Home-Logout Button oben rechts */
+    .home-icon-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5em;
+    background-color: #ffffffcc;
+    color: #111;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+    .home-icon-btn:hover {
+        background-color: #ffffff;
+        transform: scale(1.1);
+    }

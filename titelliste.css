@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;  /* Horizontal zentrieren */
+    align-items: center;      /* Vertikal zentrieren */
+    height: 100vh;            /* Volle Höhe */
+    text-align: center;       /* Text zentrieren */
+    position: relative;
+    background: url('images/wall4.jpg') no-repeat center center fixed; /* Nur wall4 als Hintergrund */
+    background-size: cover;  /* Bild an die gesamte Seite anpassen */
+}
+
+/* Transparente Overlay-Schicht */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Schwarze Schicht mit 50% Transparenz */
+    z-index: -1; /* Hintergrundbild hinter den Inhalt legen */
+}
+
+
+/* Styling für den Titel */
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Styling für die Song-Liste */
+.song-list {
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling für jedes Listenelement */
+.song-item {
+    font-size: 1.5em;
+    margin: 10px 0;  /* Abstand zwischen den Songs */
+}
+
+
+/* Zurück-Button */
+.btn-back {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 24px;
+    background-color: #ffffffcc;
+    color: #111;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 50;
+    font-size: 1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #fff;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Styling für die Titelliste */
+.song-list {
+    list-style-type: none; /* Entfernt die Standard-Aufzählungszeichen */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive Spalten */
+    gap: 20px; /* Abstand zwischen den Listenelementen */
+    justify-items: center; /* Zentriert die Listenelemente */
+}
+
+/* Styling für jedes Listenelement */
+.song-item {
+    background-color: rgba(255, 255, 255, 0.2); /* Hintergrundfarbe */
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Leichter Schatten */
+}
+
+/* Erweiterter Hover-Effekt */
+.song-item:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Hellere Farbe bei Hover */
+    transform: scale(1.05); /* Vergrößert das Element leicht */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stärkerer Schatten */
+}
+
+/* Styling für den Titel */
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Alle Tabs ausblenden */
+.tab-content {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Nur den aktiven Tab anzeigen */
+.tab-content.active {
+    display: block;
+}
+

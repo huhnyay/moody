@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url("images/wall6.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #eee;
+}
+
+.btn-schreibtisch, .btn-logout {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #ffffffcc;
+    color: #111;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-schreibtisch:hover,
+.btn-logout:hover {
+    background-color: #ffffff;
+}
+
+/* ---------- SIGN-UP FORMULAR ---------- */
+
+.signup-form {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.form_area {
+    background-color: #1e1e2f;
+    border: 2px solid #7f5af0;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.2);
+    padding: 30px 20px;
+    width: 320px;
+    color: #ffffffdd;
+}
+
+.title {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.sub_title {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #ffffffcc;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 15px;
+}
+
+.form_style {
+    background-color: #2c2c40;
+    color: #fff;
+    padding: 12px 10px;
+    border: 2px solid #7f5af0;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: none;
+    outline: none;
+}
+
+.form_style:focus {
+    box-shadow: 0 0 8px #a78bfa;
+    transform: translateY(1px);
+}
+
+.btn {
+    background-color: #7f5af0;
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #a78bfa;
+    transform: translateY(1px);
+}
+
+.link {
+    color: #cfcfff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.form_area p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccccff;
+}}
